@@ -1,0 +1,39 @@
+.about {
+  height: 95vh;
+  padding: 100px;
+}
+
+.about-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & p {
+    font-size: 2.5rem;
+    padding-left: 7rem;
+  }
+  & img {
+    height: 500px;
+    border-radius: 50%;
+  }
+}
+
+// if the browser window is 768px or smaller
+@media screen and (max-width: 768px) {
+  #about {
+    margin: auto;
+    padding-top: 2rem;
+    height: 100vh;
+  }
+  .about-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about-wrap img {
+    height: 250px;
+  }
+  .about-wrap p {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+}

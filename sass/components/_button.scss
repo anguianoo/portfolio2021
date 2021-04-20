@@ -1,0 +1,14 @@
+.submit-btn {
+  width: auto;
+  border: none;
+  border-radius: 100px;
+  background-color: $color-primary;
+  color: #ffffff;
+  margin: 1rem;
+  padding: 1rem;
+  &:hover {
+    background-color: #ffffff;
+    color: $color-primary;
+    border: $color-primary 1px solid;
+  }
+}

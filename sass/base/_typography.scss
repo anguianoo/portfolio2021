@@ -1,0 +1,17 @@
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    color: #822165;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+.titles {
+  text-align: center;
+  padding-top: 5rem;
+  color: $color-primary;
+  font-size: 50px;
+}

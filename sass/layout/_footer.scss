@@ -1,0 +1,17 @@
+footer {
+  height: 200px;
+  width: 100%;
+  text-align: center;
+}
+.socials {
+  color: $color-primary;
+  padding: 0 0.5rem;
+}
+.socials-link {
+  display: flex;
+  justify-content: center;
+}
+.foot-note {
+  color: $color-primary;
+  margin: 3.5rem 0;
+}
