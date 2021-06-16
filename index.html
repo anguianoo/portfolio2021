@@ -24,14 +24,13 @@
     <nav id="nav">
       <div class="hamburger">
         <i class="display-none fas fa-bars fa-2x"></i>
-        <!-- <i class="fas fa-hamburger fa-2x"></i> -->
       </div>
 
       <ul class="nav-list">
-        <li><a href="#header">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a class="aTag" href="#header">Home</a></li>
+        <li><a class="aTag" href="#about">About</a></li>
+        <li><a class="aTag" href="#projects">Projects</a></li>
+        <li><a class="aTag" href="#contact">Contact</a></li>
       </ul>
     </nav>
     <header class="header" id="header">
@@ -39,7 +38,7 @@
         <h1 class="heading-primary">
           <span class="heading-primary-sub"> Sup, I am</span>
           <span class="heading-primary-main">Norberto Anguiano</span>
-          <span class="heading-primary-sub"> I am a Web Developer </span>
+          <span class="heading-primary-sub"> I am a Front-end Developer </span>
         </h1>
         <a class="link" href="#about">
           <span class="link__arrow">
@@ -55,11 +54,27 @@
     <section class="about" id="about">
       <div class="titles about-title">About</div>
       <div class="about-wrap">
-        <img src="./img/replace.jpg" alt="Tito" />
-        <p>
-          I am gamer, artist, skateborder, musician (well, I can play guitar and
-          piano Lol) and a web-developer.
-        </p>
+        <img src="./img/tito.jpg" alt="Tito" />
+        <p class="center">I am a gamer, artist, skateborder, I play music.</p>
+      </div>
+    </section>
+    <section class="skills">
+      <h3 class="titles">Skills</h3>
+      <div class="skills__flex-rows">
+        <ul class="row">
+          <li>HTML5</li>
+          <li>CSS</li>
+          <li>SASS</li>
+          <li>JAVASCRIPT</li>
+        </ul>
+        <ul class="row">
+          <li>REACT</li>
+          <li>JQUERY</li>
+          <li>PHOTOSHOP</li>
+          <li>ILLUSTRATOR</li>
+          <li>GRAPHQL</li>
+          <li>GIT</li>
+        </ul>
       </div>
     </section>
 
@@ -69,12 +84,12 @@
         <li>
           <!-- first -->
           <div class="image-container">
-            <img class="project-img" src="./img/projects2.JPg" alt="project" />
+            <img class="project-img" src="./img/projects2.jpg" alt="project" />
             <div class="overlay">
               <div class="text">
                 <span class="text-title">Project Title</span>
                 <span class="text-sub">skill set</span>
-                <a class="text-btn">show more</a>
+                <a class="text-btn">visit site</a>
               </div>
             </div>
           </div>
@@ -87,7 +102,7 @@
               <div class="text">
                 <span class="text-title">Project Title</span>
                 <span class="text-sub">skill set</span>
-                <a class="text-btn">show more</a>
+                <a class="text-btn">visit site</a>
               </div>
             </div>
           </div>
@@ -119,10 +134,15 @@
     <footer>
       <ul class="socials-link">
         <li>
-          <a class="socials" href=""><i class="fab fa-linkedin fa-3x"></i></a>
+          <a
+            class="socials"
+            href="https://www.linkedin.com/in/norberto-anguiano-a45500a9/"
+            target="_blank"
+            ><i class="fab fa-linkedin fa-3x"></i
+          ></a>
         </li>
         <li>
-          <a class="socials" href=""
+          <a class="socials" href="https://github.com/anguianoo" target="_blank"
             ><i class="fab fa-github-square fa-3x"></i
           ></a>
         </li>

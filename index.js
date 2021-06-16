@@ -31,8 +31,6 @@ function navBar() {
 
   hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open")
-    hamburger.classList.toggle("colorToWhite")
-    
 
     links.forEach(link => {
       link.classList.add("fade")
