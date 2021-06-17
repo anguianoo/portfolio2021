@@ -9,56 +9,110 @@
 ol {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  @media only screen and (max-width: $bp-1200) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
 }
 .image-container {
   position: relative;
-  &:hover .project-img {
-    opacity: 0.3;
-  }
-  &:hover .overlay {
-    opacity: 1;
-  }
-  & .text-title {
-    animation: moveIntopImg 0.5s ease-out;
-  }
 
-  & .text-sub {
-    animation: moveInBottomImg 0.5s ease-out;
-  }
-  &:hover .text-btn {
-    animation: moveInBottomImg 0.5s ease-out;
+  @media only screen and (min-width: $bp-1200) {
+    &:hover .project-img {
+      opacity: 0.3;
+    }
+    &:hover .overlay {
+      opacity: 1;
+    }
+    & .text-title {
+      animation: moveIntopImg 0.5s ease-out;
+    }
+
+    & .text-sub {
+      animation: moveInBottomImg 0.5s ease-out;
+    }
+    &:hover .text-btn {
+      animation: moveInBottomImg 0.5s ease-out;
+    }
   }
 }
 .text-sub {
   display: block;
   font-size: 25px;
 }
+.text-title {
+  padding-top: 1.5rem;
+}
+.text-sub,
+.text-title {
+  color: $color-primary;
+}
 .project-img {
   opacity: 1;
   display: block;
-  width: 100%;
+  width: 600px;
+  height: 525px;
+
   height: auto;
   padding: 1rem;
   transition: 0.5 ease;
   backface-visibility: hidden;
+
+  @media only screen and (max-width: $bp-1200) {
+    width: 500px;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    width: 400px;
+  }
+  @media only screen and (max-width: $bp-small) {
+    width: 300px;
+  }
 }
 .overlay {
-  transition: ease;
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: ease;
+  @media only screen and (max-width: $bp-medium) {
+    position: static;
+    display: inline;
+
+    opacity: 1;
+  }
 }
 
+.projects__btns {
+  display: flex;
+  @media only screen and (max-width: $bp-medium) {
+    justify-content: center;
+  }
+}
 .text {
   font-size: 16px;
   padding: 16px 32px;
   text-align: center;
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 5px;
+  }
+
   &-title {
     display: block;
     margin-bottom: 5rem;
     font-size: 50px;
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+  }
+  &-sub {
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
   }
 
   &-btn {
@@ -69,9 +123,14 @@ ol {
     color: white;
     font-size: 16px;
     cursor: pointer;
-    width: auto;
+    width: 10rem;
     margin: 2rem;
     padding: 10px 0;
+    @media only screen and (max-width: $bp-medium) {
+      width: 3rem;
+      margin: 0.5rem;
+      font-size: 0.5rem;
+    }
   }
 
   &-btn:hover {
@@ -83,15 +142,11 @@ ol {
 
 @media screen and (max-width: 768px) {
   // projects
-  #projects ol {
-    flex-direction: column;
-  }
+
   .image-container {
     position: static;
   }
-  .project-img {
-    padding: 0;
-  }
+
   .text {
     padding: 0;
   }

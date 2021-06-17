@@ -5,6 +5,14 @@
   padding: 0;
 }
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  background-color: rgb(238, 238, 238);
 }
+
+$bp-largest: 93.75em; // 1500px
+$bp-large: 87.5em; // 1400px
+$bp-1200: 75em; // 1200px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px / 16 = 37.25
+$bp-smallest: 31.25em; // 500px

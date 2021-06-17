@@ -209,8 +209,9 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  background-color: #eeeeee;
 }
 
 li {
@@ -463,7 +464,7 @@ nav li {
     display: flex;
     position: absolute;
     cursor: pointer;
-    right: 5%;
+    right: 2%;
     top: 10%;
     -webkit-transform: translate(0%, 50%);
             transform: translate(0%, 50%);
@@ -589,33 +590,47 @@ ol {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 75em) {
+  ol {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
 }
 
 .image-container {
   position: relative;
 }
 
-.image-container:hover .project-img {
-  opacity: 0.3;
-}
-
-.image-container:hover .overlay {
-  opacity: 1;
-}
-
-.image-container .text-title {
-  -webkit-animation: moveIntopImg 0.5s ease-out;
-          animation: moveIntopImg 0.5s ease-out;
-}
-
-.image-container .text-sub {
-  -webkit-animation: moveInBottomImg 0.5s ease-out;
-          animation: moveInBottomImg 0.5s ease-out;
-}
-
-.image-container:hover .text-btn {
-  -webkit-animation: moveInBottomImg 0.5s ease-out;
-          animation: moveInBottomImg 0.5s ease-out;
+@media only screen and (min-width: 75em) {
+  .image-container:hover .project-img {
+    opacity: 0.3;
+  }
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  .image-container .text-title {
+    -webkit-animation: moveIntopImg 0.5s ease-out;
+            animation: moveIntopImg 0.5s ease-out;
+  }
+  .image-container .text-sub {
+    -webkit-animation: moveInBottomImg 0.5s ease-out;
+            animation: moveInBottomImg 0.5s ease-out;
+  }
+  .image-container:hover .text-btn {
+    -webkit-animation: moveInBottomImg 0.5s ease-out;
+            animation: moveInBottomImg 0.5s ease-out;
+  }
 }
 
 .text-sub {
@@ -623,10 +638,20 @@ ol {
   font-size: 25px;
 }
 
+.text-title {
+  padding-top: 1.5rem;
+}
+
+.text-sub,
+.text-title {
+  color: #ea3449;
+}
+
 .project-img {
   opacity: 1;
   display: block;
-  width: 100%;
+  width: 600px;
+  height: 525px;
   height: auto;
   padding: 1rem;
   -webkit-transition: 0.5 ease;
@@ -635,15 +660,55 @@ ol {
           backface-visibility: hidden;
 }
 
+@media only screen and (max-width: 75em) {
+  .project-img {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .project-img {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .project-img {
+    width: 300px;
+  }
+}
+
 .overlay {
-  -webkit-transition: ease;
-  transition: ease;
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: ease;
+  transition: ease;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .overlay {
+    position: static;
+    display: inline;
+    opacity: 1;
+  }
+}
+
+.projects__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .projects__btns {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .text {
@@ -652,10 +717,30 @@ ol {
   text-align: center;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .text {
+    font-size: 5px;
+  }
+}
+
 .text-title {
   display: block;
   margin-bottom: 5rem;
   font-size: 50px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .text-title {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .text-sub {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
 }
 
 .text-btn {
@@ -666,9 +751,17 @@ ol {
   color: white;
   font-size: 16px;
   cursor: pointer;
-  width: auto;
+  width: 10rem;
   margin: 2rem;
   padding: 10px 0;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .text-btn {
+    width: 3rem;
+    margin: 0.5rem;
+    font-size: 0.5rem;
+  }
 }
 
 .text-btn:hover {
@@ -678,17 +771,8 @@ ol {
 }
 
 @media screen and (max-width: 768px) {
-  #projects ol {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   .image-container {
     position: static;
-  }
-  .project-img {
-    padding: 0;
   }
   .text {
     padding: 0;
@@ -709,6 +793,12 @@ ol {
 
 .contact-title {
   text-align: center;
+}
+
+@media only screen and (max-width: 75em) {
+  .contact {
+    margin-top: 10rem;
+  }
 }
 
 form {
@@ -734,6 +824,13 @@ textarea {
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: hidden;
+}
+
+@media only screen and (max-width: 75em) {
+  input,
+  textarea {
+    width: 75%;
+  }
 }
 
 input::-webkit-input-placeholder {
@@ -776,13 +873,6 @@ input::placeholder {
   color: #ea3449;
 }
 
-@media screen and (max-width: 768px) {
-  input,
-  textarea {
-    width: 75%;
-  }
-}
-
 footer {
   height: 200px;
   width: 100%;
@@ -808,49 +898,42 @@ footer {
   margin: 3.5rem 0;
 }
 
-.skills {
-  text-align: center;
-}
-
-.skills__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .row li {
   padding: 1rem;
   font-size: 1rem;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .skills__flex-rows {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
 }
 
-@media screen and (min-width: 600px) {
-  .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
+@media only screen and (max-width: 56.25em) {
+  .skills__flex-rows {
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=styles.css.map */

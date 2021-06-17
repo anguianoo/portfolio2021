@@ -4,6 +4,9 @@
   &-title {
     text-align: center;
   }
+  @media only screen and (max-width: $bp-1200) {
+    margin-top: 10rem;
+  }
 }
 
 form {
@@ -22,6 +25,10 @@ textarea {
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: hidden;
+
+  @media only screen and (max-width: $bp-1200) {
+    width: 75%;
+  }
 }
 input::placeholder {
   color: $color-primary;
@@ -31,12 +38,5 @@ input::placeholder {
   &::placeholder {
     padding-top: 0;
     color: $color-primary;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  input,
-  textarea {
-    width: 75%;
   }
 }
